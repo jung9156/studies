@@ -1,0 +1,24 @@
+@import "../../components";
+
+.homeIntroduce {
+  padding: 5vh;
+  background-image: url("https://user-images.githubusercontent.com/60081201/93174760-7b457e00-f769-11ea-9fbc-d1f6248c0405.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.v-card {
+  transition: opacity 0.4s ease-in-out;
+  &.rounded-card {
+    border-radius: 20vw;
+  }
+}
+
+.v-card:not(.on-hover) {
+  opacity: 0.9;
+}
+
+.show-btns {
+  color: rgba(255, 255, 255, 1) !important;
+}

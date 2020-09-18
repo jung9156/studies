@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mt-5 card text-center">
+  <div class="card-header">
+    질문을 해주세요
+  </div>
+  <div class="card-body">
+    <h1 class="card-title">{{ response.output.generic.0.text }}</h1>
+    <form action="" method="POST" name="msg_form">
+      <p class="card-text">
+        {% csrf_token %}
+        질문 : <input type="text" name="msg">
+      </p>
+      <button href="#" class="btn btn-primary">submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+{% endblock %}

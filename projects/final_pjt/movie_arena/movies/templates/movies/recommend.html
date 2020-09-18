@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for recommend in recommend_list %}
+<div class="bg-{{ recommend.bg }} p-3 my-1">
+  <h1 class="mt-3 text-white">{{ recommend.ment }}</h1>
+  <div>
+    <div id="carouselExampleFade{{ forloop.counter }}" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <div class ="row">
+            {% for movie in recommend.first_movies %}
+              <a class="text-white col-md-2" href="{% url 'movies:movie_detail' movie.pk %}">
+                {{ forloop.counter }}. {{ movie.title }}
+                <img src="https://image.tmdb.org/t/p/w154{{ movie.poster_path }}" class="d-block w-100 h-100" alt="...">  
+              </a>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class ="row">
+            {% for movie in recommend.second_movies %}
+              <a class="col-md-2" href="{% url 'movies:movie_detail' movie.pk %}">
+                {{ forloop.counter }}. {{ movie.title }}
+                <img src="https://image.tmdb.org/t/p/w154{{ movie.poster_path }}" class="d-block w-100 h-100" alt="...">
+              </a>
+            {% endfor%}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}

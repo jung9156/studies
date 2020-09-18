@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9ac34992-7787-4d7e-b3d6-cd4aca627988" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="lecture" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1Y1Lztfq9nrB0SRIcfx1Kn0DPhN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/algorithm/problem" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Desktop\jung9156\lecture\algorithm\problem" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.input">
+    <configuration name="1244.최대 상금" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lecture" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm/problem" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/problem/1244.최대 상금.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="6026. 성수의 비밀번호 공격" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lecture" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm/problem" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/problem/6026. 성수의 비밀번호 공격.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="input" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lecture" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/input.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="input2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lecture" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/input2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="prac" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="lecture" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/algorithm" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/algorithm/prac.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.input" />
+        <item itemvalue="Python.prac" />
+        <item itemvalue="Python.1244.최대 상금" />
+        <item itemvalue="Python.input2" />
+        <item itemvalue="Python.6026. 성수의 비밀번호 공격" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ac34992-7787-4d7e-b3d6-cd4aca627988" name="Default Changelist" comment="" />
+      <created>1582105419916</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582105419916</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="933" y="316" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog" timestamp="1593065513307">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="933" y="316" key="#com.jetbrains.python.refactoring.move.PyMoveModuleMembersDialog/0.0.1536.864@0.0.1536.864" timestamp="1593065513307" />
+    <state width="772" height="221" key="GridCell.Tab.0.bottom" timestamp="1593162477084">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="892" height="289" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591434092597" />
+    <state width="772" height="221" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1593162477084" />
+    <state width="772" height="221" key="GridCell.Tab.0.center" timestamp="1593162477084">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="892" height="289" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591434092597" />
+    <state width="772" height="221" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1593162477084" />
+    <state width="772" height="221" key="GridCell.Tab.0.left" timestamp="1593162477084">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="892" height="289" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591434092597" />
+    <state width="772" height="221" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1593162477084" />
+    <state width="772" height="221" key="GridCell.Tab.0.right" timestamp="1593162477084">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="892" height="289" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591434092597" />
+    <state width="772" height="221" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1593162477084" />
+    <state width="772" height="221" key="GridCell.Tab.1.bottom" timestamp="1593162477084">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="892" height="289" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591434092597" />
+    <state width="772" height="221" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1593162477084" />
+    <state width="772" height="221" key="GridCell.Tab.1.center" timestamp="1593162477084">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="892" height="289" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1591434092597" />
+    <state width="772" height="221" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1593162477084" />
+    <state width="772" height="221" key="GridCell.Tab.1.left" timestamp="1593162477084">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="892" height="289" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1591434092597" />
+    <state width="772" height="221" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1593162477084" />
+    <state width="772" height="221" key="GridCell.Tab.1.right" timestamp="1593162477084">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="892" height="289" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1591434092597" />
+    <state width="772" height="221" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1593162477084" />
+    <state width="623" height="419" key="XDebugger.FullValuePopup" timestamp="1590039032671">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="623" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1590039032671" />
+    <state width="623" height="439" key="XDebugger.FullValuePopup/0.0.1536.864@0.0.1536.864" timestamp="1584512285304" />
+    <state x="843" y="257" key="com.intellij.ide.util.TipDialog" timestamp="1593137586508">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="843" y="245" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591422598542" />
+    <state x="843" y="257" key="com.intellij.ide.util.TipDialog/0.0.1536.864@0.0.1536.864" timestamp="1593137586508" />
+    <state x="824" y="105" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1593137948838">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="824" y="105" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.864@0.0.1536.864" timestamp="1593137948838" />
+    <state x="732" y="156" width="700" height="530" key="recent.locations.popup" timestamp="1593067794412">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="732" y="156" width="700" height="530" key="recent.locations.popup/0.0.1536.864@0.0.1536.864" timestamp="1593067794412" />
+    <state x="815" y="185" width="672" height="679" key="search.everywhere.popup" timestamp="1593161430058">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="815" y="176" width="672" height="647" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1591331674981" />
+    <state x="815" y="185" width="672" height="679" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1593161430058" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithm/problem/1244.최대 상금.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithm/prac.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/algorithm/input.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="mt-5">
+  <h1>제목 : {{ article.title }}</h1> 
+  <p>작성자: {{ article.user.username }} </ㅔ> 
+  <div class="">
+    <h3>{{ article.content }}</h3>
+    <hr>
+    <span>생성 시각: {{ article.created_at }}</span>
+    <span class="ml-auto">수정 시각: {{ article.updated_at }}</span>
+  </div>
+  <hr>
+  {% if article.user == request.user %}
+  <a class="btn btn-primary" href="{% url 'communities:update' article.pk %}">수정</a>  
+  <a class="btn btn-primary" href="{% url 'communities:delete' article.pk %}">삭제</a>
+  <hr>
+  {% endif %}
+</div>
+<div>
+  <form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>submit</button>
+  </form>
+  <hr>
+</div>
+<div>
+  <h1>댓글</h1>
+  {% for comment in comments %}
+    <h3>{{ comment.content }}</h3>
+    <h5>댓글 쓴 사람 : {{ comment.user }}
+      {% if comment.user.color == "red" %}
+      <span  class="badge badge-danger"> RED </span>
+      {% elif comment.user.color == "grey" %}
+      <span  class="badge badge-secondary"> GREY </span>
+      {% elif comment.user.color == "yellow" %}
+      <span  class="badge badge-warning"> YELLOW </span>
+      {% elif comment.user.color == "mint" %}
+      <span  class="badge badge-success"> GREEN </span>
+      {% elif comment.user.color == "skyblue" %}
+      <span  class="badge badge-primary"> BLUE </span>
+      {% elif comment.user.color == "dark" %}
+      <span  class="badge badge-dark"> DARK </span>
+      {% else %}
+      <span  class="badge badge-white"> WHITE </span>
+      {% endif %}
+    </h5>
+    <h5>작성 시각 : {{ comment.created_at }} | 수정 시각 : {{ comment.updated_at }}</h5>
+    {% if comment.user == request.user %}
+    <a href="{% url 'communities:comment_delete' article.pk comment.pk %}"><button>삭제</button></a>
+    <hr>
+    {% endif %}
+  {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+@import "../components";
+
+.box {
+  background: #5b1311;
+  width: 45vw;
+  height: 60vh;
+  text-align: center;
+  color: white;
+  margin: 5vh auto;
+  padding: 2vh 0;
+  border-radius: 3vw;
+
+  h1 {
+    color: white;
+    margin: 6vh auto;
+  }
+
+  input[type = "text"], input[type = "password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 1vh auto;
+    text-align: center;
+    border: 3px solid #9d201d;
+    padding: 2vh 3vw;
+    width: 40vw;
+    outline: none;
+    color: white;
+    border-radius: 10vw;
+    transition: 0.3s;
+  }
+  
+  input[type = "text"]:focus, input[type = "password"]:focus {
+    width: 43vw;
+    border-color: #de2d29;
+  }
+
+  input[type = "submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 5vh auto;
+    text-align: center;
+    border: 3px solid #9d201d;
+    padding: 2vh 3vw;
+    width: 30vw;
+    color: white;
+    border-radius: 10vw;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  input[type = "submit"]:hover {
+    background: #9A3324;
+  }
+}
+

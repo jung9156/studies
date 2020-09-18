@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% block css %}
+  .detail{
+    position:absolute;
+    left:50%;
+    margin-left:-500px;
+    margin-top:50px;
+    border:1px solid;
+    padding:10px;
+    width: 1000px;
+    font-size: medium;
+  }
+  .editdelete{
+  	display:inline-block;
+  }
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class='detail'>
+  <h2 style="text-align:center">{{ movie.title }}</h2>
+  <hr>
+  <div class="embed-responsive embed-responsive-16by9">
+    <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hmeBDulYVI0?rel=0" allowfullscreen></iframe> -->
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ res.items.0.id.videoId }}?rel=0" allowfullscreen></iframe>
+  </div>
+  <img src="https://image.tmdb.org/t/p/w92{{ movie.poster_path }}" alt="img" class="float-right">
+
+  <P>영화 개봉일: {{ movie.release_date }}</P>
+  <p>영화 장르:
+  {% for genre in movie.genres.all %}
+  <span>{{ genre.name }}</span>
+
+  {% endfor %}
+  </p>
+  {% if request.user.is_authenticated %}
+    {% for genre in movie.genres.all %}
+      {% if user_genre == genre.pk %}
+        <h>회원님이 좋아하는 장르의 영화입니다!!!!</h>
+      {% endif %}
+    {% endfor%}
+  {% endif %}
+  <br>
+  <br>
+  <br>
+
+  <p>{{ movie.overview }}</p>
+
+
+  <hr>
+  {% if user.is_authenticated %}
+  <div class="review_point">
+    <div class="input_star">
+      <div class="review_point">
+        <div id="pointStarRating" class="st_off">
+          <i class="rating-button star_10 star_9 star_8 star_7 star_6 star_5 star_4 star_3 star_2 star_1 fas fa-star" data-id="{{ movie.pk }}" data-rate="1"></i>
+          <i class="rating-button star_10 star_9 star_8 star_7 star_6 star_5 star_4 star_3 star_2 fa fa-star" data-id="{{ movie.pk }}" data-rate="2"></i>
+          <i class="rating-button star_10 star_9 star_8 star_7 star_6 star_5 star_4 star_3 fas fa-star" data-id="{{ movie.pk }}" data-rate="3"></i>
+          <i class="rating-button star_10 star_9 star_8 star_7 star_6 star_5 star_4 fa fa-star" data-id="{{ movie.pk }}" data-rate="4"></i>
+          <i class="rating-button star_10 star_9 star_8 star_7 star_6 star_5 fas fa-star" data-id="{{ movie.pk }}" data-rate="5"></i>
+          <i class="rating-button star_10 star_9 star_8 star_7 star_6 fa fa-star" data-id="{{ movie.pk }}" data-rate="6"></i>
+          <i class="rating-button star_10 star_9 star_8 star_7 fas fa-star" data-id="{{ movie.pk }}" data-rate="7"></i>
+          <i class="rating-button star_10 star_9 star_8 fa fa-star" data-id="{{ movie.pk }}" data-rate="8"></i>
+          <i class="rating-button star_10 star_9 fas fa-star" data-id="{{ movie.pk }}" data-rate="9"></i>
+          <i class="rating-button star_10 fa fa-star" data-id="{{ movie.pk }}" data-rate="10"></i>
+          <span id="pointStarRatingValue" class="st_point">0</span><span> 점</span>
+        </div>
+      </div>
+      {% if user in movie.like_users.all %}
+      <h1 class="point_notice"> {{ rate }} 점을 평가하셨습니다.</h1>
+      {% else %}
+      <h1 class="point_notice">별점을 선택하세요</h1>
+      {% endif %}
+    </div>   
+  </div>
+  {% endif %}
+
+  <hr>
+  <a href="{% url 'movies:index' %}" class="btn btn-outline-warning">BACK</a>
+</div>
+
+<script>
+
+  const ratingButtonList = document.querySelectorAll('.rating-button')
+
+  ratingButtonList.forEach(ratingButton => {
+    ratingButton.addEventListener('mouseover', function(event) {
+      const starRate = event.target.dataset.rate
+      const onStars = document.querySelectorAll(`.star_${starRate}`)
+      onStars.forEach(onStar => {
+        onStar.classList.add(`star_on`)
+        document.querySelector(`#pointStarRatingValue`).innerText = event.target.dataset.rate
+      })
+    })
+
+    ratingButton.addEventListener('mouseout', function(event) {
+      ratingButtonList.forEach(offStar => {
+        offStar.classList.remove(`star_on`)
+        document.querySelector(`#pointStarRatingValue`).innerText = 0
+      }) 
+    })
+
+    ratingButton.addEventListener('click', function(event) {
+      const movieId = event.target.dataset.id
+      const starRate = event.target.dataset.rate
+      
+      {% if user.is_authenticated %}
+        axios.get(`/movies/${movieId}/${starRate}/like/`)
+        .then(response => {
+          console.log(response)
+          document.querySelector(`.point_notice`).innerText = `${response.data.rate} 점을 평가하셨습니다.`
+        })
+        .catch(error => {
+          console.log(error)
+        })
+      {% else %}
+        alert('비로그인 사용자는 평점을 매길 수 없습니다.')
+      {% endif %}
+    })  
+  })
+
+
+</script>
+
+<style>
+  .star_on{
+    color: crimson;
+  }
+</style>
+{% endblock %}

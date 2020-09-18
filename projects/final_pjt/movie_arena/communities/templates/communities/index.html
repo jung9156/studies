@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+  <div class="list-group col-2">
+    <div class="text-center">
+      <h5>{{ request.user.username }}님은 <span class="text-{{ request.user.color }}">{{ request.user.color }}</span>색 입니다.</h5>
+    </div>
+    <a href="{% url 'communities:color' 'white' %}" type="button" class="list-group-item list-group-item-white list-group-item-action">
+      자유 게시판
+    </a>
+    <a href="{% url 'communities:color' 'red' %}" type="button" class="list-group-item list-group-item-danger list-group-item-action"><span>액션 / 모험 게시판         </span><span class="ml-auto">{{ article_number_dict.red }}명</span></a>
+    <a href="{% url 'communities:color' 'grey' %}" type="button" class="list-group-item list-group-item-secondary list-group-item-action"><span>다큐 / 역사 게시판  </span><span class="ml-auto">{{ article_number_dict.grey }}명</span></a>
+    <a href="{% url 'communities:color' 'yellow' %}" type="button" class="list-group-item list-group-item-warning list-group-item-action"><span>코미디 / 애니 게시판  </span><span class="ml-auto">{{ article_number_dict.yellow }}명</span></a>
+    <a href="{% url 'communities:color' 'mint' %}" type="button" class="list-group-item list-group-item-success list-group-item-action"><span>로맨스/드라마 게시판  </span><span class="ml-auto">{{ article_number_dict.mint }}명</span></a>
+    <a href="{% url 'communities:color' 'skyblue' %}" type="button" class="list-group-item list-group-item-primary list-group-item-primary list-group-item-action"></span><span>SF / 판타지 게시판  <span class="ml-auto">{{ article_number_dict.skyblue }}명</span></a>
+    <a href="{% url 'communities:color' 'dark' %}" type="button" class="list-group-item list-group-item-dark list-group-item-action"><span>공포 / 스릴러 게시판  </span><span class="">{{ article_number_dict.dark }}명</span></a>
+    <br><hr>
+    <h3>1등 게시판 : <span class="text-{{ article_number_dict.best_bootstrap }}">{{ article_number_dict.best }}</span></h3>
+  </div>
+  <div class="col">
+    <h1>articles</h1>
+    <h3>{{ article_color }}</h3>
+    <table class="table">
+      <thead class="{{ article_color }}">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Title</th>
+          <th scope="col">user</th>
+          <th scope="col">created_at</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for article in articles %}
+        <tr>
+          <th scope="row">{{ article.pk }}</th>
+          <td><a href="{% url 'communities:detail' article_color article.pk %}">{{ article.title }}</a></td>
+          <td>{{ article.user.username }}</td>
+          <td>{{ article.created_at }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% if article_color == request.user.color %}
+      <a href="{% url 'communities:create' article_color %}" class="btn btn-primary">글 쓰기</a>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+
+</script>
+
+<style>
+.red {
+  background-color: red;
+}
+.text-red {
+  color: red;
+}
+
+.grey {
+  background-color: grey;
+}
+.text-grey {
+  color: grey;
+}
+
+.yellow {
+  background-color: yellow;
+}
+.text-yellow {
+  color: yellow;
+}
+
+.skyblue {
+  background-color: skyblue;
+}
+.text-skyblue {
+  color: skyblue;
+}
+
+.mint {
+  background-color: greenyellow;
+}
+.text-mint {
+  color: greenyellow;
+}
+
+.dark {
+  background-color: darkslategray;
+  color: white;;
+}
+.text-dark {
+  color: dark;
+}
+
+.container {
+  margin-top: 5vh;
+}
+</style>
+
+{% endblock %}

@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if request.user.is_superuser %}
+<hr>
+관리자 상태 : {{ person.is_staff }}
+  {% if person.is_staff %}
+  <form action="{% url 'accounts:management' person.username %}">
+    <button class="btn btn-primary" data-id="person.username">관리권한 취소</button>
+  </form>
+  {% else %}
+  <form action="{% url 'accounts:management' person.username %}">
+    <button class="btn btn-primary" data-id="person.username">관리권한 부여</button>
+  </form>
+  {% endif %}
+  <hr>
+{% endif %}
+<h1>{{ person.username }}의 프로필
+{% if person.color == "red" %}
+<span  class="badge badge-danger"> RED </span>
+{% elif person.color == "grey" %}
+<span  class="badge badge-secondary"> GREY </span>
+{% elif person.color == "yellow" %}
+<span  class="badge badge-warning"> YELLOW </span>
+{% elif person.color == "mint" %}
+<span  class="badge badge-success"> GREEN </span>
+{% elif person.color == "skyblue" %}
+<span  class="badge badge-primary"> BLUE </span>
+{% elif person.color == "dark" %}
+<span  class="badge badge-dark"> DARK </span>
+{% else %}
+<span  class="badge badge-white"> WHITE </span>
+{% endif %}
+</h1>
+<p>email: {{ person.email }}</p>
+<p>age: {{ person.age }}</p>
+{% if request.user != person %}
+<h1>{{ person.username }}이 평점을 매긴 영화</h1>
+{% else %}
+<h1>당신이 평점을 매긴 영화</h1>
+{% endif %}
+<div class="progress">
+  <div class="like-color progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: {{ person_color.red }}%" aria-valuenow="{{ person_color.red }}" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="like-color progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: {{ person_color.yellow }}%" aria-valuenow="{{ person_color.yellow }}" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="like-color progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: {{ person_color.mint }}%" aria-valuenow="{{ person_color.mint }}%" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="like-color progress-bar progress-bar-striped progress-bar-animated bg-secondary" role="progressbar" style="width: {{ person_color.grey }}%" aria-valuenow="{{ person_color.grey }}%" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="like-color progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: {{ person_color.skyblue }}%" aria-valuenow="{{ person_color.skyblue }}" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="like-color progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" style="width: {{ person_color.dark }}%" aria-valuenow="{{ person_color.dark }}" aria-valuemin="0" aria-valuemax="100"></div>
+  <div class="like-color progress-bar progress-bar-striped progress-bar-animated bg-white" role="progressbar" style="width: {{ person_color.white }}%" aria-valuenow="{{ person_color.white }}" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+<div class="movie_list mt-3">
+  {% for movie in movies %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-12">
+        <div class="poster"><a href="{% url 'movies:movie_detail' movie.pk %}"><img src="https://image.tmdb.org/t/p/w154{{ movie.poster_path }}" alt="img" ></a></div>
+      </div>
+      <div class="col-md-9 ">
+        <h1>{{ movie.title }} 
+          {% if movie.red == 1 %}
+          <span  class="badge badge-danger">  </span>
+          {% endif %}
+          {% if movie.grey == 1 %}
+          <span  class="badge badge-secondary">  </span>
+          {% endif %}
+          {% if movie.yellow == 1 %}
+          <span  class="badge badge-warning">  </span>
+          {% endif %}
+          {% if movie.mint == 1 %}
+          <span  class="badge badge-success">  </span>
+          {% endif %}
+          {% if movie.skyblue == 1 %}
+          <span  class="badge badge-primary">  </span>
+          {% endif %}
+          {% if movie.dark == 1 %}
+          <span  class="badge badge-dark">  </span>
+          {% endif %}
+        </h1>
+        <P>영화 개봉일: {{ movie.release_date }}</P>
+        <p>영화 장르:
+        {% for genre in movie.genres.all %}
+        <span>{{ genre.name }} </span>
+        {% endfor %}</p>
+
+       
+        <a href="{% url 'movies:movie_detail' movie.pk %}"><button type="button" class="btn btn-primary  d-flex justify-content-left">자세히 보기</button></a>
+
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  {% endfor %}
+</div>
+
+{% endblock %}

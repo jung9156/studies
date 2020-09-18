@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- mappers/gueset.xml -->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mappers/user.xml -->
+<mapper namespace="com.ssafy.repository.SituationRepository"> <!-- mybatis는 namespace필수!! -->
+
+	<select id="selectReportStatus0ThisYear" resultType="Situation">
+		SELECT a.month,
+		ifnull(b.count,00) as count
+		FROM situationLeftJoin a
+		left JOIN (SELECT MONTH(date) as month, count(*) as count FROM violation
+		where YEAR(date) = '2020' and report_status = 0
+		GROUP by MONTH(date)) b
+		ON a.month = b.month
+		order by a.month;
+	</select>
+
+	<select id="selectReportStatus1ThisYear" resultType="Situation">
+		SELECT a.month,
+		ifnull(b.count,00) as count
+		FROM situationLeftJoin a
+		left JOIN (SELECT MONTH(date) as month, count(*) as count FROM violation
+		where YEAR(date) = '2020' and report_status = 1
+		GROUP by MONTH(date)) b
+		ON a.month = b.month
+		order by a.month;
+	</select>
+
+	<select id="selectReportStatus2ThisYear" resultType="Situation">
+		SELECT a.month,
+		ifnull(b.count,00) as count
+		FROM situationLeftJoin a
+		left JOIN (SELECT MONTH(date) as month, count(*) as count FROM violation
+		where YEAR(date) = '2020' and report_status = 2
+		GROUP by MONTH(date)) b
+		ON a.month = b.month
+		order by a.month;
+	</select>
+
+	<select id="allCnt" resultType="Integer">
+		select count(*)
+		from violation;
+	</select>
+
+
+
+
+	<select id="selectByUserReportStatus0ThisYear" resultType="Situation">
+		SELECT a.month,
+		ifnull(b.count,00) as count
+		FROM situationLeftJoin a
+		left JOIN (SELECT MONTH(date) as month, count(*) as count FROM violation
+		where YEAR(date) = '2020' and report_status = 0 and user_no =
+		#{userno}
+		GROUP by MONTH(date)) b ON a.month = b.month
+		order by a.month;
+	</select>
+	
+	<select id="selectByUserReportStatus1ThisYear" resultType="Situation">
+		SELECT a.month,
+		ifnull(b.count,00) as count
+		FROM situationLeftJoin a
+		left JOIN (SELECT MONTH(date) as month, count(*) as count FROM violation
+		where YEAR(date) = '2020' and report_status = 1 and user_no =
+		#{userno}
+		GROUP by MONTH(date)) b ON a.month = b.month
+		order by a.month;
+	</select>
+	
+	<select id="selectByUserReportStatus2ThisYear" resultType="Situation">
+		SELECT a.month,
+		ifnull(b.count,00) as count
+		FROM situationLeftJoin a
+		left JOIN (SELECT MONTH(date) as month, count(*) as count FROM violation
+		where YEAR(date) = '2020' and report_status = 2 and user_no =
+		#{userno}
+		GROUP by MONTH(date)) b ON a.month = b.month
+		order by a.month;
+	</select>
+	
+	<select id="userCnt" resultType="Integer">
+		select count(*)
+		from violation
+		where user_no = #{userno};
+	</select>
+</mapper>
+

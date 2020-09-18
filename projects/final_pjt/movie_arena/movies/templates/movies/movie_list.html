@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load bootstrap_pagination %}
+
+
+
+{% block content %}
+
+
+<div class="movie_list">
+  {% for movie in page_obj %}
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-3 col-12">
+        <div class="poster"><a href="{% url 'movies:movie_detail' movie.pk %}"><img src="https://image.tmdb.org/t/p/w154{{ movie.poster_path }}" alt="img" ></a></div>
+      </div>
+      <div class="col-sm-9">
+        <h1>{{ movie.title }} 
+          {% if movie.red == 1 %}
+          <span  class="badge badge-danger">  </span>
+          {% endif %}
+          {% if movie.grey == 1 %}
+          <span  class="badge badge-secondary">  </span>
+          {% endif %}
+          {% if movie.yellow == 1 %}
+          <span  class="badge badge-warning">  </span>
+          {% endif %}
+          {% if movie.mint == 1 %}
+          <span  class="badge badge-success">  </span>
+          {% endif %}
+          {% if movie.skyblue == 1 %}
+          <span  class="badge badge-primary">  </span>
+          {% endif %}
+          {% if movie.dark == 1 %}
+          <span  class="badge badge-dark">  </span>
+          {% endif %}
+        </h1>
+        <P>영화 개봉일: {{ movie.release_date }}</P>
+        <p>영화 장르:
+        {% for genre in movie.genres.all %}
+        <span>{{ genre.name }} </span>
+        {% endfor %}</p>
+
+       
+        <a href="{% url 'movies:movie_detail' movie.pk %}"><button type="button" class="btn btn-primary  d-flex justify-content-left">자세히 보기</button></a>
+
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  {% endfor %}
+  <div class="justify-content-center">
+  {% bootstrap_paginate page_obj range=10 show_prev_next="false" show_first_last="true" %}
+  </div>
+
+</div>
+
+
+
+{% endblock %}
