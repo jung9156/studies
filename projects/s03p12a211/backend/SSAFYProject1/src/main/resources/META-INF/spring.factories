@@ -1,2 +1,0 @@
-# META-INF/spring.factories 
-org.springframework.boot.env.EnvironmentPostProcessor=com.ssafy.util.EncryptionEnvironmentPostProcessor

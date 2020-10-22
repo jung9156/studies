@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import "../../components";
+
+.heritage-cards {
+  margin: 5vh 5vw;
+}
+
+.v-card-container:hover {
+  cursor: pointer;
+}
+
+.v-card--reveal {
+  align-items: center;
+  bottom: 0;
+  justify-content: center;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+}
